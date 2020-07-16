@@ -15,7 +15,7 @@ namespace LoggingKata.Test
             //Act
             var actual = sut.Parse("34,88,Taco Bell Atmore");
             //Assert
-            Assert.NotNull(actual);
+            Assert.NotNull(actual); // Tests to make sure that the string is not null
         }
 
         [Theory]
@@ -29,8 +29,8 @@ namespace LoggingKata.Test
             var actual = sut.Parse(str);
             //Assert
             Assert.Equal(expected, actual.Name);
-            Assert.Equal(lat, actual.Location.Latitude);
-            Assert.Equal(log, actual.Location.Longitude);
+            Assert.Equal(lat, actual.Location.Latitude); //Where 'lat' is our expected value, and Location.Latitude is our actual
+            Assert.Equal(log, actual.Location.Longitude); //Where 'log' is our expected value, and Location.Longitude is our actual
 
         }
 
@@ -46,7 +46,7 @@ namespace LoggingKata.Test
             //Act
             var actual = sut.Parse(str);
             //Assert
-            Assert.Equal(null, actual);
+            Assert.Equal(null, actual); // Since we want the parse to fail, we set the expected value to 'null' 
         }
     }
 }
